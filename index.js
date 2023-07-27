@@ -2,9 +2,9 @@ const express = require('express')
 const route = require('routers')
 const mongoose = require('mongoose')
 const path = require('path');
-require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
+require('dotenv').config({ path: path.resolve(__dirname, './.env') });
 const app = express()
-const router = require("./routes")
+const router = require("./src/routes")
 
 app.use(express.static("public"));
 app.set("json spaces", 2)
