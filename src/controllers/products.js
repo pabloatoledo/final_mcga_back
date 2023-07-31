@@ -29,13 +29,14 @@ const getProductByName = (req, res) => {
 
 const create = (req, res) => {
     const newProduct = {
+        id: req.body.id,
         name: req.body.name,
         price: req.body.price,
         stock: req.body.stock,
         description: req.body.description
     };
     Products.create(newProduct)
-      .then((data) => res.json({ msg: "Product in shop parcial01 was added with the data: ", data }))
+      .then((data) => res.json({ msg: "Product in final MCGA was added with the data: ", data }))
       .catch((err) => res.status(500).json({ msg: `Error: ${err}` }));
 };
 

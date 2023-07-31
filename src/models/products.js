@@ -3,7 +3,8 @@ const { Schema } = mongoose;
 
 const ProductsSchema = new Schema({
     id: {
-        type: String
+        type: String,
+        maxLength: 10,
     },
     name: {
         type: String,
