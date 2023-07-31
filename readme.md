@@ -1,6 +1,6 @@
 # Project Title
 
-Exam 01 for MCGA - 04/10/22
+Final exam MCGA 08/08/23
 
 ## Description
 
@@ -47,6 +47,7 @@ None
 
 ## Authors
 Pablo Toledo
+Marcos Zalazar
 
 ## Version History
 * 0.1
