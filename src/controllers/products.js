@@ -1,8 +1,8 @@
-const products = require("../models/products");
+//const products = require("../models/products");
 const Products = require("../models/products");
 
 const getStatus = (req, res) => {
-    products.find()
+    Products.find()
         .then((response) => res.status(200).json({ msg: "Connection OK"}))
         .catch((err) => res.status(500).json({ msg: `Error: ${err}` }));
 }
@@ -29,7 +29,7 @@ const getProductByName = (req, res) => {
 
 const create = (req, res) => {
     const newProduct = {
-        id: req.body.id,
+        _id: req.body.id,
         name: req.body.name,
         price: req.body.price,
         stock: req.body.stock,

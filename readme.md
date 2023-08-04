@@ -1,4 +1,4 @@
-# Project Title
+# Exámen final MCGA - 2023
 
 Final exam MCGA 08/08/23
 
@@ -14,13 +14,13 @@ The database contains field for save ID, name, price, stock and description of p
 This project contain these endpoints:
 
 * 1: GET
-    * 1.1: /exam_01_mcga/products: this return the message Connection OK if the response of the server was succefull with code 200.
-    * 1.2: /exam_01_mcga/products/all: this return all the products of the database.
-    * 1.3: /exam_01_mcga/products/name/"name of product": this search the information about the product with name wanted.
-    * 1.4: /exam_01_mcga/products/id/"id of product": this search the information about the product with id wanted.
+    * 1.1: /final_mcga/products: this return the message Connection OK if the response of the server was succefull with code 200.
+    * 1.2: /final_mcga/products/all: this return all the products of the database.
+    * 1.3: /final_mcga/products/name/"name of product": this search the information about the product with name wanted.
+    * 1.4: /final_mcga/products/id/"id of product": this search the information about the product with id wanted.
 
 * 2: POST
-    * 2.1: /exam_01_mcga/products: this function is for add a new product in the database. The structure of the command is (all are required):
+    * 2.1: /final_mcga/products: this function is for add a new product in the database. The structure of the command is (all are required):
         {
             "name":"name of product",                   ==> type string
             "price":"price of product",                 ==> type number
@@ -29,10 +29,10 @@ This project contain these endpoints:
         }
 
 * 3: DELETE
-    * 3.1: /exam_01_mcga/products/"id of product": this function is for fisic delete of product.
+    * 3.1: /final_mcga/products/"id of product": this function is for fisic delete of product.
 
 * 4: PUT
-    * 4.1: /exam_01_mcga/products/"id of product": this function is for update a field or fields of product existing in the database. The Syntax is the same as point 2.1, but with the new values.
+    * 4.1: /final_mcga/products/"id of product": this function is for update a field or fields of product existing in the database. The Syntax is the same as point 2.1, but with the new values.
 
 ### Dependencies
 
@@ -46,8 +46,8 @@ routers: version 0.1.4
 None
 
 ## Authors
-Pablo Toledo
-Marcos Zalazar
+* Pablo Toledo
+* Marcos Zalazar
 
 ## Version History
 * 0.1
