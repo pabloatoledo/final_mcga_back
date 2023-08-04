@@ -54,15 +54,17 @@ const remove = (req, res) => {
 
 const update = (req, res) => {
     const { id } = req.params;
-    Products.findByIdAndUpdate(id, req.body)
+    const updatedData = req.body;
+    Products.findOneAndUpdate({ id: id }, updatedData, { new: true })
       .then((data) => {
-        if (data.length === 0) {
-            return res.status(404).json({ msg: `Product not found by ID: ${id}` });
-        } 
+        if (!data) {
+          return res.status(404).json({ msg: `Product not found by ID: ${id}` });
+        }
         return res.json({ msg: "Product updated", data });
       })
-      .catch((err) => res.status(500).json({ msg: `Error: ${err}` }));
-};
+      .catch((err) => res.status(500).json({ msg: `Error updating product: ${err.message}` }));
+    };
+  
 
 module.exports = {
     getStatus,
