@@ -5,12 +5,12 @@ const ProductsSchema = new Schema({
     id: {
         type: String,
         maxLength: 10,
+        unique: true,
     },
     name: {
         type: String,
         maxLength: 50,
         required: true,
-        unique: true,
     },
     price: {
         type: Number,
