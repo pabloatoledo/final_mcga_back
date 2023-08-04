@@ -68,7 +68,6 @@ module.exports = {
     getStatus,
     getAll,
     getProductById,
-    getProductByName,
     remove,
     create,
     update    
