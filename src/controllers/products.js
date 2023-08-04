@@ -29,7 +29,7 @@ const getProductById = (req, res) => {
 
 const create = (req, res) => {
     const newProduct = {
-        _id: req.body.id,
+        id: req.body.id,
         name: req.body.name,
         price: req.body.price,
         stock: req.body.stock,
@@ -42,7 +42,7 @@ const create = (req, res) => {
 
 const remove = (req, res) => {
     const { id } = req.params;
-    Products.deleteOne({_id: id})
+    Products.deleteOne({id})
       .then((data) => {
         if (data.length === 0) {
             return res.status(404).json({ msg: `Product not found by ID: ${id}` });
