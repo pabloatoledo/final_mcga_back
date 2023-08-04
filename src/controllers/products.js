@@ -15,17 +15,17 @@ const getAll = (req, res) => {
 
 const getProductById = (req, res) => {
     const { productId } = req.params;
-    Products.find({_id: productId})
+    Products.find({id: productId})
         .then((data) => res.json({ data }))
         .catch((err) => res.status(500).json({ msg: `Error: ${err}` }));
 }
 
-const getProductByName = (req, res) => {
-    const { productName } = req.params;
-    Products.find({name: productName})
-        .then((data) => res.json({ data }))
-        .catch((err) => res.status(500).json({ msg: `Error: ${err}` }));
-}
+// const getProductByName = (req, res) => {
+//     const { productName } = req.params;
+//     Products.find({name: productName})
+//         .then((data) => res.json({ data }))
+//         .catch((err) => res.status(500).json({ msg: `Error: ${err}` }));
+// }
 
 const create = (req, res) => {
     const newProduct = {
