@@ -57,12 +57,12 @@ const update = (req, res) => {
       .catch((err) => res.status(500).json({ msg: `Error updating product: ${err.message}` }));
     };
 
-const respOkOpt = (res, req) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
-  res.header('Access-Control-Allow-Headers', 'Authorization, Content-Type');
-  res.status(200).send();
-}
+// const respOkOpt = (res, req) => {
+//   res.header('Access-Control-Allow-Origin', '*');
+//   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+//   res.header('Access-Control-Allow-Headers', 'Authorization, Content-Type');
+//   res.status(200).send();
+// }
 
 module.exports = {
     getStatus,
@@ -71,5 +71,4 @@ module.exports = {
     remove,
     create,
     update,
-    respOkOpt
 };

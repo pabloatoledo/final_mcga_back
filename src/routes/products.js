@@ -3,7 +3,6 @@ const products = require('../controllers/products');
 const verifyToken = require('../middleware/verifyToken');
 
 router.get("/", products.getStatus);
-router.options("/", products.respOkOpt);
 router.get("/id/:productId", products.getProductById);
 router.get("/all", products.getAll);
 
