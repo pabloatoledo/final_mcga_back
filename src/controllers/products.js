@@ -1,4 +1,3 @@
-//const products = require("../models/products");
 const Products = require("../models/products");
 
 const getStatus = (req, res) => {
@@ -19,13 +18,6 @@ const getProductById = (req, res) => {
         .then((data) => res.json({ data }))
         .catch((err) => res.status(500).json({ msg: `Error: ${err}` }));
 }
-
-// const getProductByName = (req, res) => {
-//     const { productName } = req.params;
-//     Products.find({name: productName})
-//         .then((data) => res.json({ data }))
-//         .catch((err) => res.status(500).json({ msg: `Error: ${err}` }));
-// }
 
 const create = (req, res) => {
     const newProduct = {
