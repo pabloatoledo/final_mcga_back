@@ -10,7 +10,7 @@
   },
   "name": "parcial-01",
   "version": "1.0.0",
-  "description": "Parcial 01 materia MCGA - UAI",
+  "description": "Final MCGA UAI",
   "main": "./src/index.js",
   "scripts": {
     "start": "node index.js"

@@ -6,10 +6,10 @@ router.get("/", products.getStatus);
 router.get("/id/:productId", products.getProductById);
 router.get("/all", products.getAll);
 
-router.use(verifyToken);
 
-router.post("/", products.create);
-router.delete("/:id", products.remove);
-router.put("/:id", products.update);
+
+router.post("/", verifyToken, products.create);
+router.delete("/:id", verifyToken, products.remove);
+router.put("/:id", verifyToken, products.update);
 
 module.exports = router;

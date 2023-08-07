@@ -56,7 +56,6 @@ const update = (req, res) => {
       })
       .catch((err) => res.status(500).json({ msg: `Error updating product: ${err.message}` }));
     };
-  
 
 module.exports = {
     getStatus,
@@ -64,5 +63,5 @@ module.exports = {
     getProductById,
     remove,
     create,
-    update    
+    update,
 };
