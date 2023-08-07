@@ -5,17 +5,16 @@ const path = require('path');
 require('dotenv').config({ path: path.resolve(__dirname, './.env') });
 const app = express()
 const router = require("./src/routes")
+const corsOptions = {
+  allowedHeaders: ['Content-Type', 'Authorization']
+}
 const cors = require('cors');
 
 app.use(express.static("public"));
 app.set("json spaces", 2)
 app.use(express.json());
 app.use(router)
-app.use(cors({
-  origin: process.env.ORIGIN_URL,
-  allowedHeaders: 'X-Requested-With,content-type, Authorization',
-  credentials: true
-}));
+app.use(cors(corsOptions));
 
 console.log(process.env.PORT)
 
